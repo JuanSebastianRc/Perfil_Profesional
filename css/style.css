@@ -162,7 +162,7 @@ body{
 
 .options{
     background-color: #e5e5f7;
-    background-image: linear-gradient(#444cf7 0.5px, transparente 0.5px), radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+    background-image: linear-gradient(#444cf7 0.5px, #e5e5f7 0.5px), radial-gradient(#444cf7 0.5px, transparente 0.5px);
     background-size: cover;
     background-position: 0 0, 10px 10px;
     overflow: hidden;
@@ -231,7 +231,7 @@ body{
 }
 
 .testimony_course{
-    background-color: royalblue;
+    background-color: rgb(129, 155, 232)e;
     color: #fff;
     display: inline-block;
     padding: 5px;
@@ -249,7 +249,6 @@ body{
 }
 
 .footer_title{
-    font-weight: 300;
     font-size: 2rem;
     margin-bottom: 30px;
 }
