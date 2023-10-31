@@ -80,5 +80,85 @@ console.log(
         icon: 'success',
         title: 'juan sebastian',
         html: respuesta,
-        background: '#fff'
-    })
+        background: '#fff',
+        timer: 1000,
+        showConfirmButton: false
+    });
+
+    //######### OPERADORES LOGICOS Y ESTRUCTURAS CONDICIONALES (inverse, increment)
+var bool    = false;
+var numeric = 5;
+if(!bool && numeric == "5"){
+    console.log("ingrese if " + bool);
+}else{
+    console.log("ingrese else " + bool);
+}
+
+//OR || con if
+var age = 31;
+if(age == 31 || numeric == "5"){
+    console.log("ingrese else " + bool);
+    age++;
+}else{
+    console.log("ingrese else " + bool);
+    age--;
+}
+console.log(age);
+
+//FOR
+console.log(array_tex.length);
+for(let i=0; i<array_tex.length; i++){
+    console.log(array_tex[i] + (i+1));
+}
+
+//WHILE
+console.log("WHILE");
+let j = 0;
+while(j<array_tex.length){
+    console.log(array_tex[j] + (j+1));
+    j++;
+}
+
+console.log("DO WHILE");
+//DO WHILE
+let w = 0;
+do{
+    console.log(array_tex[w] + (w+1));
+    w++;
+}while(w<array_tex.length)
+
+//CREAR FUNCIONES
+function load_page(){
+    alert("bienvenido a mi sitio web")
+}
+
+function change_color(){
+    document.body.style.backgroundColor = "red";
+    document.body.style.color = "#fff";
+}
+
+const btn_clear = document.querySelector("#limpiar")
+btn_clear.addEventListener("click", () =>{
+    document.body.style.backgroundColor = "white";
+    document.body.style.color = "#000";   
+});
+
+//FORMULARIO DE REGISTRO
+const form_register = document.getElementById("form_register");
+const Nombres = document.getElementById("Nombres");
+const Apellidos = document.getElementById("Apellidos");
+const Validation = document.getElementById("Validation");
+
+form_register.addEventListener("submit", event_name => {
+    event_name.preventDefault();
+    let info = "";
+    if(Nombres.value.length <= 2 || Apellidos.value.length <= 2){
+    info += "Nombres y/o Apellidos deben ser mayor a 2 letras";
+    Validation.style.color = "red";
+    }else{
+        alert(Nombres + " " + Apellidos);
+        Nombres.style.backgroundColor = "green";
+        Apellidos.style.backgroundColor = "green";
+    }
+    Validation.innerText = info;
+});
