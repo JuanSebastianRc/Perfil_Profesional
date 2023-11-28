@@ -162,3 +162,35 @@ form_register.addEventListener("submit", event_name => {
     }
     Validation.innerText = info;
 });
+function load_page(){
+    document.getElementById("nombres").focus();
+    document.getElementById("apellidos").disabled = true;
+    let date = new Date();
+    console.log(date.getFullYear())
+
+    for(let a = 0; a<array_str.length; a++){
+      console.log(array_mul[a].name)
+    }
+  }
+  function validate(){
+    alert("Funciona")
+    let nombre = document.getElementById("nombres").value
+    console.log(nombre.length)
+    if(nombres.length<2){
+      document.getElementById("apellidos").value
+      document.getElementById("apellidos").value
+      alert(nombres.toLowerCase())
+      alert(nombres.concat("Carrascal"))
+    }
+  }
+  // Pegar la funcion de whats
+  let table = document.querySelector('.puntos tbody')
+  let row = table.insertRow(0)
+  let cell1 = row.insertCell(0)
+  let cell2 = row.insertCell(1)
+  let cell3 = row.insertCell(2)
+  let cell4 = row.insertCell(3)
+  cell1.innerHTML= nombre
+  cell2.innerText= apellido
+  cell3.innerHTML= number
+  cell4.innerHTML= correo
